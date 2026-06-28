@@ -1,19 +1,38 @@
 import { Link } from 'react-router-dom';
 import { products } from '../data/products';
+import {proCat } from '../data/products';
 import { company, galleryImages } from '../data/site';
+// function FeaturedCarousel() {
+//   const items = products.slice(0, 6);
+
+//   return (
+//     <div className="flex gap-5 overflow-x-auto pb-2 carousel-scrollbar snap-x snap-mandatory">
+//       {items.map((products) => (
+//         <article key={products.id} className="min-w-[280px] snap-start rounded-3xl border border-slate-200 bg-white p-4 shadow-soft">
+//           <img src={products.images[products.x]} alt={products.title} />
+//           <div className="mt-4">
+//             <h3 className="mt-2 text-xl font-bold text-primary">{products.title}</h3>
+//             <p className="mt-2 text-sm leading-6 text-slate-600">{products.shortDescription}</p>
+//           </div>
+//         </article>
+//       ))}
+//     </div>
+//   );
+// }
 
 function FeaturedCarousel() {
-  const items = products.slice(0, 6);
+  const items = proCat.slice(0, 3);
 
   return (
     <div className="flex gap-5 overflow-x-auto pb-2 carousel-scrollbar snap-x snap-mandatory">
-      {items.map((product) => (
-        <article key={product.id} className="min-w-[280px] snap-start rounded-3xl border border-slate-200 bg-white p-4 shadow-soft">
-          <img src={product.images[0]} alt={product.title} loading="lazy" className="h-44 w-full rounded-2xl object-cover" />
+      {items.map((proCat) => (
+        <article key={proCat.id} className="min-w-[280px] snap-start rounded-3xl border border-slate-200 bg-white p-4 shadow-soft">
+          <a herf="site.js?filter=coated">
+        <img src={proCat.images[proCat.y]} alt={proCat.title} />
+          </a>
           <div className="mt-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">{product.category}</p>
-            <h3 className="mt-2 text-xl font-bold text-primary">{product.title}</h3>
-            <p className="mt-2 text-sm leading-6 text-slate-600">{product.shortDescription}</p>
+            <h3 className="mt-2 text-xl font-bold text-primary">{proCat.title}</h3>
+            <p className="mt-2 text-sm leading-6 text-slate-600">{proCat.shortDescription}</p>
           </div>
         </article>
       ))}
@@ -32,7 +51,7 @@ export default function HomePage() {
             <span className="inline-flex rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-slate-200">
               Trusted since {company.established}
             </span>
-            <h1 className="mt-6 max-w-3xl text-5xl font-extrabold leading-tight sm:text-6xl lg:text-6xl">
+            <h1 className="mt-6 max-w-2xl text-4xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">
               Premium steel supply for infrastructure, fabrication, and industrial projects.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
@@ -48,10 +67,10 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            <img src={galleryImages[0]} alt="Company location" className="h-72 w-full rounded-3xl object-cover shadow-lift sm:col-span-2" loading="lazy" />
-            <img src={galleryImages[1]} alt="Company board" className="h-48 w-full rounded-3xl object-cover shadow-soft" loading="lazy" />
-            <img src={galleryImages[2]} alt="Company board" className="h-48 w-full rounded-3xl object-cover shadow-soft" loading="lazy" />
+          <div className="grid gap-4 sm:grid-cols-50">
+            <img src={galleryImages[0]} alt="Company location" className="h-1000 w-full rounded-3xl object-cover shadow-lift sm:col-span-2" loading="lazy" />
+            {/* <img src={galleryImages[1]} alt="Company board" className="h-48 w-full rounded-3xl object-cover shadow-soft" loading="lazy" />
+            <img src={galleryImages[2]} alt="Company board" className="h-48 w-full rounded-3xl object-cover shadow-soft" loading="lazy" /> */}
           </div>
         </div>
       </section>
@@ -71,7 +90,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      {/* <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto mb-10 max-w-3xl text-center">
           <p className="section-kicker text-sm font-semibold text-accent">Highlights</p>
           <h2 className="mt-3 text-4xl font-bold text-primary">Built for a cleaner buying journey.</h2>
@@ -92,7 +111,7 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       <section className="bg-slate-50 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -121,11 +140,11 @@ export default function HomePage() {
               Read company story
             </Link>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
+          {/* <div className="grid gap-4 sm:grid-cols-2">
             {galleryImages.slice(3).map((src, index) => (
               <img key={src} src={src} alt={`Company gallery ${index + 1}`} loading="lazy" className="h-56 w-full rounded-3xl object-cover shadow-soft" />
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 

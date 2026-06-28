@@ -21,11 +21,11 @@ export const filterGroups = [
   {
     key: 'material',
     label: 'Material',
-    options: ['Mild Steel', 'Galvanized', 'Stainless Steel', 'Alloy Steel']
+    options: ['Mild Steel', 'Galvanised', 'Stainless Steel', 'Alloy Steel']
   },
   {
     key: 'form',
-    label: 'Form',
+    label: 'Shape',
     options: ['Bar', 'Pipe', 'Plate', 'Beam', 'Coil', 'Sheet', 'Rod']
   },
   {
@@ -36,10 +36,22 @@ export const filterGroups = [
 ];
 
 export const galleryImages = [
-  '/images/company-01.jpg',
-  '/images/company-02.jpg',
-  '/images/company-03.jpg',
-  '/images/company-04.jpg',
-  '/images/company-05.jpg',
-  '/images/company-06.jpg',
+  '/images/Kashinath Steel.jpg',
+ // '/images/company-02.jpg',
+ // '/images/company-03.jpg',
+  //'/images/company-04.jpg',
+  //'/images/company-05.jpg',
+  //'/images/company-06.jpg',
+  // '/images/company-07.jpg',
+  // '/images/company-08.jpg',
+  // '/images/company-09.jpg',
+  // '/images/company-10.jpg',
+  // '/images/company-11.jpg',
+  // '/images/company-12.jpg',
+  // '/images/company-13.jpg',
+  // '/images/company-14.jpg',
+  // '/images/company-15.jpg',
+  // '/images/company-16.jpg',
+  // '/images/company-17.jpg',
+  // '/images/company-18.jpg'
 ];
