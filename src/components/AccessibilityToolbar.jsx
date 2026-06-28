@@ -72,11 +72,11 @@ export default function AccessibilityToolbar() {
     >
       <a href="#main-content" className="skip-link">
         Skip to content
-      </a>
+      </a> 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between text-sm">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 text-slate-700 shadow-sm">
+            <span className="inline-flex items-center gap-2  border-slate-200 bg-white/80 px-3 py-1.5 text-slate-700 shadow-sm">
               Accessibility tools
             </span>
             <button
