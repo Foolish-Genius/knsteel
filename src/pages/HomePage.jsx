@@ -51,7 +51,7 @@ export default function HomePage() {
             <span className="inline-flex rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-slate-200">
               Trusted since {company.established}
             </span>
-            <h1 className="mt-6 max-w-3xl text-5xl font-extrabold leading-tight sm:text-6xl lg:text-6xl">
+            <h1 className="mt-6 max-w-3xl text-4xl font-extrabold leading-tight sm:text-6xl lg:text-6xl">
               Premium steel supply for infrastructure, fabrication, and industrial projects.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
