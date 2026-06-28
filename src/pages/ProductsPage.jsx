@@ -163,12 +163,12 @@ export default function ProductsPage() {
         {selectedProduct && (
           <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="space-y-4">
-              <img src={selectedProduct.images[0]} alt={selectedProduct.title} className="h-72 w-full rounded-3xl object-cover" />
-              <div className="grid grid-cols-3 gap-3">
+              <img src={selectedProduct.images[selectedProduct.x]} alt={selectedProduct.title} className="h-72 w-full rounded-3xl object-cover" />
+              {/* <div className="grid grid-cols-3 gap-3">
                 {selectedProduct.images.map((image) => (
                   <img key={image} src={image} alt={`${selectedProduct.title} view`} className="h-24 w-full rounded-2xl object-cover" />
                 ))}
-              </div>
+              </div> */}
             </div>
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">{selectedProduct.category}</p>

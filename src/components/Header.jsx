@@ -9,9 +9,11 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur-xl shadow-sm">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <NavLink to="/" className="flex items-center gap-3" onClick={() => setMobileOpen(false)}>
-          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-lg font-bold text-white">
+          {/* <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-lg font-bold text-white">
             KN
-          </div>
+          </div> */}
+          <div>
+            <img src = '/images/KN-Logo.png' alt = "abab" loading="lazy" className="h-11 w-11  object-cover" /> </div>
           <div className="leading-tight">
             <div className="text-xl font-bold tracking-tight text-primary sm:text-2xl">{company.name}</div>
             <div className="text-xs uppercase tracking-[0.28em] text-slate-500">Steel trading and processing</div>

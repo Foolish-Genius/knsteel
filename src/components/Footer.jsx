@@ -8,7 +8,9 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <div className="mb-4 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-primary font-bold">KN</div>
+              <div className="flex h-12 w-12 items-center justify-center bg-white">
+            <img src = '/images/KN-Logo.png' alt = "abab" loading="lazy" className="h-11 w-11  object-cover" /> 
+              </div>
               <div className="text-xl font-bold text-white">{company.name}</div>
             </div>
             <p className="max-w-sm text-sm leading-6 text-slate-400">{company.description}</p>
@@ -40,7 +42,7 @@ export default function Footer() {
                 </a>
               </p>
               <p>
-                Design and Developed by{' '}
+                Designed and Developed by{' '}
                 <a href="https://chitranceinfotech.com" target="_blank" rel="noreferrer" className="text-white underline decoration-white/30 underline-offset-4 transition hover:text-accent">
                   Chitrance Infotech
                 </a>

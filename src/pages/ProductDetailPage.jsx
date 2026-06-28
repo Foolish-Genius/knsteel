@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import Seo from '../components/Seo';
 import { productsBySlug } from '../data/products';
+// import { proCategoryBySlug } from '../data/products';
 import { company } from '../data/site';
 
 export default function ProductDetailPage() {
@@ -33,7 +34,8 @@ export default function ProductDetailPage() {
       '@type': 'Offer',
       priceCurrency: 'INR',
       availability: 'https://schema.org/InStock',
-      url: `/products/${product.slug}`
+      url: `/products/${product.slug}`,
+      // url:`/products/${proCategory.slug}`,
     }
   };
 
@@ -92,10 +94,10 @@ export default function ProductDetailPage() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          <img src={product.images[0]} alt={product.title} className="h-80 w-full rounded-3xl object-cover shadow-lift sm:col-span-2" />
-          {product.images.slice(1).map((image) => (
-            <img key={image} src={image} alt={`${product.title} gallery`} className="h-56 w-full rounded-3xl object-cover shadow-soft" />
-          ))}
+          <img src={product.images[product.x]} alt={product.title} className="h-80 w-full rounded-3xl object-cover shadow-lift sm:col-span-2" />
+          {/* {product.images.slice().map((images) => (
+            <img key={images} src={images} alt={`${product.title} gallery`} className="h-56 w-full rounded-3xl object-cover shadow-soft" />
+          ))} */}
         </div>
       </section>
     </main>

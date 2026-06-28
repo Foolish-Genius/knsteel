@@ -5,7 +5,7 @@ export default function ProductCard({ product, onViewDetails }) {
     <article className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-lift">
       <div className="relative overflow-hidden bg-slate-100">
         <img
-          src={product.images[0]}
+          src={product.images[product.x]}
           alt={product.title}
           loading="lazy"
           className="h-60 w-full object-cover transition duration-500 group-hover:scale-105"
