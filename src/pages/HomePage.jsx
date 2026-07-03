@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { products } from '../data/products';
 import {proCat } from '../data/products';
 import { company, galleryImages } from '../data/site';
+import FilterBar from '../components/FilterBar';
 // function FeaturedCarousel() {
 //   const items = products.slice(0, 6);
 
@@ -27,9 +28,10 @@ function FeaturedCarousel() {
     <div className="flex gap-5 overflow-x-auto pb-2 carousel-scrollbar snap-x snap-mandatory">
       {items.map((proCat) => (
         <article key={proCat.id} className="min-w-[280px] snap-start rounded-3xl border border-slate-200 bg-white p-4 shadow-soft">
-          <a herf="site.js?filter=coated">
+          <Link to ="/products">
+          {/* <FilterBar categories={categories} activeCategory={proCat.category} onCategoryChange={setCategory} filters={filters} onFilterChange={toggleFilter} onClear={clearFilters} /> */}
         <img src={proCat.images[proCat.y]} alt={proCat.title} />
-          </a>
+          </Link>
           <div className="mt-4">
             <h3 className="mt-2 text-xl font-bold text-primary">{proCat.title}</h3>
             <p className="mt-2 text-sm leading-6 text-slate-600">{proCat.shortDescription}</p>
@@ -117,8 +119,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>
-              <p className="section-kicker text-sm font-semibold text-accent">Featured products</p>
-              <h2 className="mt-3 text-3xl font-bold text-primary">Core products in a browsable carousel.</h2>
+              <p className="section-kicker text-3x1 font-bold text-accent">Featured products</p>
+              <h2 className="mt-3 text-3xl font-bold text-primary"></h2>
             </div>
             <Link to="/products" className="hidden rounded-full border border-slate-200 bg-white px-5 py-2.5 font-semibold text-slate-700 transition hover:bg-slate-100 sm:inline-flex">
               View catalog
@@ -131,7 +133,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="section-kicker text-sm font-semibold text-accent">About</p>
+            <p className="section-kicker text-3x1 font-bold text-accent">About</p>
             <h2 className="mt-3 text-4xl font-bold text-primary">Reliable trading, processing, and dispatch support.</h2>
             <p className="mt-5 text-lg leading-8 text-slate-600">
               Established in Ghaziabad, the company focuses on wholesale steel trading, source verification, and processing services such as cutting and slitting.
